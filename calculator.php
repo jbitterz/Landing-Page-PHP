@@ -9,14 +9,12 @@
 ini_set('display_errors', 0);
 $result = "";
 
-// Define operation functions
 function add($a, $b) { return $a + $b; }
 function subtract($a, $b) { return $a - $b; }
 function multiply($a, $b) { return $a * $b; }
 function divide($a, $b) { return $b != 0 ? $a / $b : "Cannot divide by 0"; }
 function modulo($a, $b) { return $b != 0 ? $a % $b : "Cannot modulo by 0"; }
 
-// Map button names to function names
 $operations = [
     'add' => 'add',
     'subtract' => 'subtract',
@@ -25,7 +23,6 @@ $operations = [
     'modulo' => 'modulo'
 ];
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num1 = $_POST['number1'];
     $num2 = $_POST['number2'];
@@ -62,3 +59,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
